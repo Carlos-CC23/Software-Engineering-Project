@@ -1,0 +1,22 @@
+<h2>Appointment History</h2>
+
+<table>
+    <tr>
+        <th>Patient Name</th>
+        <th>Discussion Notes</th>
+        <th>Date & Time</th>
+    </tr>
+    {% for history in histories %}
+    <tr>
+        <td>{{ history.patient_name }}</td>
+        <td>{{ history.discussion_notes }}</td>
+        <td>{{ history.created_at }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="3">No records found.</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<a href="{% url 'add_history' %}">Add another appointment</a>

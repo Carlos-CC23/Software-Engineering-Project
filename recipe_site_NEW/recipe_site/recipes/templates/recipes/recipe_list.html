@@ -1,0 +1,30 @@
+<h1>Recipe List</h1>
+
+<!-- Search and Filter Form -->
+<form method="GET">
+    <input type="text" name="query" placeholder="Search by name or ingredient" value="{{ request.GET.query }}">
+    <input type="text" name="medical_condition" placeholder="Filter by condition" value="{{ request.GET.medical_condition }}">
+    <button type="submit">Search</button>
+</form>
+
+<!-- Button to Show All Recipes -->
+<form method="GET" action="{% url 'recipe_list' %}">
+    <button type="submit">Show All Recipes</button>
+</form>
+
+<ul>
+    {% for recipe in recipes %}
+    <li>
+        <a href="{% url 'recipe_detail' recipe.id %}">
+            {% if recipe.image %}
+                <img src="{{ recipe.image.url }}" alt="{{ recipe.name }}" style="width:150px; height:auto;">
+            {% endif %}
+            <h3>{{ recipe.name }}</h3>
+        </a>
+    </li>
+    {% empty %}
+        <p>No recipes found.</p>
+    {% endfor %}
+</ul>
+
+

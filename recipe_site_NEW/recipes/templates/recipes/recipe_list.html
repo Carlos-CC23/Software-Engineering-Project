@@ -1,0 +1,53 @@
+<h1>Recipe List</h1>
+
+<!-- Search and Filter Form -->
+<form method="GET">
+    <input type="text" name="query" placeholder="Search by name or ingredient" value="{{ request.GET.query }}">
+
+ <select name="medical_condition">
+        <option value="">Filter by condition</option>
+        {% for condition in medical_conditions %}
+            <option value="{{ condition }}" {% if request.GET.medical_condition == condition %}selected{% endif %}>
+                {{ condition }}
+            </option>
+        {% endfor %}
+    </select>
+       <button type="submit">Search</button>
+</form>
+
+<form method="GET" action="{% url 'recipe_list' %}">
+    <button type="submit">Show All Recipes</button>
+</form>
+
+    
+<ul style="list-style-type: none; padding: 0;">
+    {% for recipe in page_obj %}
+    <li>
+        <a href="{% url 'recipe_detail' recipe.id %}">
+            {% if recipe.image %}
+                <img src="{{ recipe.image.url }}" alt="{{ recipe.name }}" style="width:300px; height:auto;">
+            {% endif %}
+            <h3>{{ recipe.name }}</h3>
+        </a>
+    </li>
+    {% empty %}
+        <p>No recipes found.</p>
+    {% endfor %}
+</ul>
+
+<!-- Pagination Controls -->
+<div class="pagination">
+    {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; First</a>
+        <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    <span>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+    {% endif %}
+</div>
+<!-- Disclaimer -->
+<p style="margin-top: 20px; font-size: 25px; color: rgb(255, 17, 17);">*This website is for educational purposes only. Consult with your doctor before engaging in these recipes.*</p>

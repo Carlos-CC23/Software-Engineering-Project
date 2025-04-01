@@ -1,0 +1,8 @@
+<h1>{{ recipe.name }}</h1>
+{% if recipe.image %}
+    <img src="{{ recipe.image.url }}" alt="{{ recipe.name }}" style="max-width: 500px;">
+{% endif %}
+<p><strong>Ingredients:</strong> {{ recipe.ingredients|linebreaks}}</p>
+<p><strong>Preparation:</strong> {{ recipe.preparation_steps|linebreaks }}</p>
+<p><strong>Nutritional Information:</strong> {{ recipe.nutritional_info |linebreaks}}</p>
+<p><strong>Medical Conditions:</strong> {{ recipe.medical_conditions|linebreaks}}</p>
