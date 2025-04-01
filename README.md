@@ -19,4 +19,4 @@ Steps:
   -Admin : http://127.0.0.1:8000/admin/
   
   -Website: http://127.0.0.1:8000/recipes/
-    
+
