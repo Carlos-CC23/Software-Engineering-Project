@@ -7,7 +7,8 @@ This Django web application allows users to:
 - Browse a database of healthy recipes.
 - Filter recipes by name, ingredients, and medical conditions.
 - Calculate recommended daily calories based on personal metrics.
-- (Admin-only)
+
+For Admin-only features:
 - Manage patient appointment histories and their track questionnaire responses.
 - Add, Remove, and Modify recipes
 
