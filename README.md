@@ -55,13 +55,16 @@ Steps:
 6) Then type cd recipe_site_v6
 7) Then type python manage.py runserver
 
+## 🔒 Website & Admin Access
+
 -Use these links to accces the main website and the admin side
 
   -Admin : http://127.0.0.1:8000/admin/
   
   -Website: http://127.0.0.1:8000/recipes/
 
-📂 Project Structure Overview
+## 📂 Project Structure Overview
+
 recipe_site_v6/
 ├── recipes/                  # Main Django app
 │   ├── models.py              # Recipe and Appointment models
@@ -74,10 +77,10 @@ recipe_site_v6/
 ├── manage.py                  # Django management file
 
 
-📜 License
+## 📜 License
 This project is for educational purposes and is not intended for commercial use.
 
-✨ Acknowledgments
+## ✨ Acknowledgments
 Special thanks to the tutorials and Django documentation that helped during development.
 
 
