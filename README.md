@@ -37,8 +37,8 @@ For Admin-only features:
 
 - **Python 3.11+**
 - **Django 4+**
-- **SQLite** (Default database for easy setup)
-- **HTML/CSS/JavaScript** (basic front-end templates)
+- **SQLite** 
+- **HTML/CSS/JavaScript** 
 - **Django Admin** for backend management
 
 ---
