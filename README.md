@@ -61,3 +61,26 @@ Steps:
   
   -Website: http://127.0.0.1:8000/recipes/
 
+📂 Project Structure Overview
+recipe_site_v6/
+├── recipes/                  # Main Django app
+│   ├── models.py              # Recipe and Appointment models
+│   ├── views.py               # Recipe views and calorie calculator
+│   ├── templates/             # HTML templates
+│   ├── static/                # CSS, JS, and image files
+│   └── admin.py               # Admin panel customizations
+├── recipe_site/               # Project settings and URLs
+├── db.sqlite3                 # Default database
+├── manage.py                  # Django management file
+
+
+📜 License
+This project is for educational purposes and is not intended for commercial use.
+
+✨ Acknowledgments
+Special thanks to the tutorials and Django documentation that helped during development.
+
+
+
+
+
