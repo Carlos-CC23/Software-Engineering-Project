@@ -10,8 +10,9 @@ Steps:
 2) Then paste this -> .venv\scripts\activate
 3) Type this to download Djanjo -> python -m pip install django
 4) Then type this in to download Pillow -> python -m pip install Pillow
-5) Then type cd recipe_site_NEW
-6) Then type python manage.py runserver
+5) then type this download Django language -> pip install django-modeltranslation
+6) Then type cd recipe_site_v6
+7) Then type python manage.py runserver
 
 -Use these links to accces the main website and the admin side
 
