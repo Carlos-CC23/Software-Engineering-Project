@@ -45,7 +45,6 @@ For Admin-only features:
 
 ## ⚙️ Installation
 
-# How to run it:
 Steps: 
 
 1) Create a virtual environment in the terminal, paste this -> py -3 -m venv .venv
