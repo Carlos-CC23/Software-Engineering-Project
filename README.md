@@ -26,10 +26,13 @@ For Admin-only features:
 - Input gender, height, weight, age, activity level, and goals.
 - Automatically calculates Basal Metabolic Rate (BMR), Total Daily Energy Expenditure (TDEE), and suggested macronutrient distribution.
 
-### Appointment History (Admin Only)
-- Record patient appointment discussions.
-- Fill out a pre-determined health questionnaire for each patient.
-- Track appointment creation time and the admin who recorded it.
+### 🏥 Medical Appointment Tracker (Admin Only)
+- Record patient appointment histories.
+- Structured Medical History Questionnaire covering:
+  - Patient identification information (name, age, sex, etc.)
+  - Reason for consultation (current symptoms, duration)
+  - Current illness details (symptoms development, treatments, allergies)
+- Automatically records appointment creation time and the admin user who recorded it.
 
 ---
 
